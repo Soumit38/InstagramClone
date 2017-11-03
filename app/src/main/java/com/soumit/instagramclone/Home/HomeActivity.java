@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.soumit.instagramclone.R;
 import com.soumit.instagramclone.Utils.BottomNavigationViewHelper;
+import com.soumit.instagramclone.Utils.SectionsPagerAdapter;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -34,9 +35,9 @@ public class HomeActivity extends AppCompatActivity {
 
     public void setupViewPager(){
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new CameraFragment());   //0
-        adapter.addFragment(new HomeFragment());     //1
-        adapter.addFragment(new MessagesFragment()); //2
+        adapter.addFragment(new CameraFragment(), "Edit profile");   //0
+        adapter.addFragment(new HomeFragment(), "Edit profile");     //1
+        adapter.addFragment(new MessagesFragment(), "Edit profile"); //2
         ViewPager viewPager = (ViewPager) findViewById(R.id.container);
         viewPager.setAdapter(adapter);
 
