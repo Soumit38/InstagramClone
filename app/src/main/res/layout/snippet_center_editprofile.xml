@@ -1,0 +1,64 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@color/White"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_photo"
+                android:layout_marginTop="20dp"
+                app:civ_border_color="@color/Black"
+                app:civ_border_width="2dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp" />
+
+            <TextView
+                android:text="Change photo"
+                android:id="@+id/change_profile_photo"
+                android:layout_below="@+id/profile_photo"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/Blue"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            
+            <!--display name section-->
+            <RelativeLayout
+                android:id="@+id/relLayout1"
+                android:layout_below="@id/change_profile_photo"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/grey_border_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:src="@drawable/ic_alert"
+                    android:layout_centerVertical="true"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+
+                <EditText
+                    android:id="@+id/username"
+                    android:background="@color/Beige"
+                    android:inputType="textNoSuggestions"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</merge>
